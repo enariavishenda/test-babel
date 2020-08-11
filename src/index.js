@@ -1,13 +1,9 @@
-import Calc from "./calc";
-import Log from "./log";
+import React from 'react';
+import ReactDom from 'react-dom';
+import scss from './main.scss'
 
-import img from './1.PNG'
+console.log(scss.toString())
 
-const calc = new Calc()
-const log = new Log()
+const App = () => <p>Its React with webpack-dev-server</p>
 
-log.log(calc.add(1,2,3))
-
-const el = document.createElement('img')
-el.src = img;
-document.body.appendChild(el)
+ReactDom.render(<App />, document.getElementById('root'))
